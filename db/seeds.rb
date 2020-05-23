@@ -16,3 +16,15 @@ Product.create([
     {Name:"murata",Age:23, Job:"lawyer", Money:2130000},
     {Name:"nakata",Age:34, Job:"scholar", Money:230000},
   ])
+
+  Category.create([
+    {Name:"ソシャゲー"},
+    {Name:"パチンコ "},
+    {Name:"競馬"},
+  ])
+
+  Payment.create([
+    {amounts:10000},
+    {amounts:20000},
+    {amounts:30000},
+  ])
