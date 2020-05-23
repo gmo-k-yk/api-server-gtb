@@ -28,3 +28,9 @@ Product.create([
     {amounts:20000},
     {amounts:30000},
   ])
+
+  History.create([
+    {payment_id:1, category_id:1},
+    {payment_id:2, category_id:3},
+    {payment_id:3, category_id:2},
+  ])
