@@ -12,7 +12,7 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create history" do
     assert_difference('History.count') do
-      post histories_url, params: { history: { category_id: @history.category_id, payment_id: @history.payment_id } }, as: :json
+      post histories_url, params: { history: { amounts: @history.amounts, category: @history.category } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class HistoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update history" do
-    patch history_url(@history), params: { history: { category_id: @history.category_id, payment_id: @history.payment_id } }, as: :json
+    patch history_url(@history), params: { history: { amounts: @history.amounts, category: @history.category } }, as: :json
     assert_response 200
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_162005) do
+ActiveRecord::Schema.define(version: 2020_05_25_110905) do
 
   create_table "categories", force: :cascade do |t|
     t.string "Name"
@@ -19,12 +19,10 @@ ActiveRecord::Schema.define(version: 2020_05_23_162005) do
   end
 
   create_table "histories", force: :cascade do |t|
-    t.integer "payment_id", null: false
-    t.integer "category_id", null: false
+    t.integer "amounts"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_histories_on_category_id"
-    t.index ["payment_id"], name: "index_histories_on_payment_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -49,6 +47,4 @@ ActiveRecord::Schema.define(version: 2020_05_23_162005) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "histories", "categories"
-  add_foreign_key "histories", "payments"
 end

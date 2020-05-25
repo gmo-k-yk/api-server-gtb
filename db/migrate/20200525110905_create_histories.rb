@@ -1,8 +1,8 @@
 class CreateHistories < ActiveRecord::Migration[6.0]
   def change
     create_table :histories do |t|
-      t.references :payment, null: false, foreign_key: true
-      t.references :category, null: false, foreign_key: true
+      t.integer :amounts
+      t.string :category
 
       t.timestamps
     end

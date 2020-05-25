@@ -46,6 +46,6 @@ class HistoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def history_params
-      params.require(:history).permit(:payment_id, :category_id)
+      params.require(:history).permit(:amounts, :category)
     end
 end

@@ -30,7 +30,8 @@ Product.create([
   ])
 
   History.create([
-    {payment_id:1, category_id:1},
-    {payment_id:2, category_id:3},
-    {payment_id:3, category_id:2},
+    {amounts:30000, category:"パチンコ"},
+    {amounts:20000, category:"ソシャゲー"},
+    {amounts:60000, category:"酒"},
+    {amounts:60000, category:"タバコ"}
   ])
